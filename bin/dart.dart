@@ -1,5 +1,5 @@
 import 'package:dart/dart.dart' as dart;
 
-void main(List<String> arguments) {
+void main() {
   print('Hello world: ${dart.calculate()}!');
 }
