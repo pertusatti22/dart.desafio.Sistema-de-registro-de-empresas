@@ -15,4 +15,8 @@ abstract class Pessoa {
   String? identificacao() {
     return '';
   }
+
+  String? formatar() {
+    return '';
+  }
 }

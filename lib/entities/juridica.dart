@@ -16,7 +16,7 @@ class Juridica extends Pessoa {
 
   @override
   String? apresentar() {
-    return '''CNPJ: $cnpj
+    return '''CNPJ: ${formatar()}
                 Razão Social: $razaoSocial
                 Nome Fantasia: $nomeFantasia
                 ${super.apresentar()}
@@ -26,5 +26,10 @@ class Juridica extends Pessoa {
   @override
   String? identificacao() {
     return '$cnpj';
+  }
+
+  @override
+  String? formatar() {
+    return '${cnpj!.substring(0, 2)}.${cnpj!.substring(2, 5)}.${cnpj!.substring(5, 8)}/${cnpj!.substring(8, 12)}-${cnpj!.substring(12, 14)}';
   }
 }

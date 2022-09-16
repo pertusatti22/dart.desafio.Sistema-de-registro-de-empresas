@@ -55,6 +55,10 @@ class EmpresaController {
     print("CNPJ: ");
     int? temp = int.tryParse(stdin.readLineSync()!);
     temp = services.validaInt(temp);
+    while (temp.toString().length != 14) {
+      print('Insira 14 digitos!');
+      temp = int.tryParse(stdin.readLineSync()!);
+    }
     String cnpj = temp.toString();
 
     print('Endereço da Empresa: ');

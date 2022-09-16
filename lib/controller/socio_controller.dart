@@ -20,6 +20,10 @@ class SocioController {
     print("CPF do Sócio: ");
     int? temp = int.tryParse(stdin.readLineSync()!);
     temp = services.validaInt(temp);
+    if (temp.toString().length != 11) {
+      print('Insira 11 digitos!');
+      temp = int.tryParse(stdin.readLineSync()!);
+    }
     String cpf = temp.toString();
 
     print('Endereço do Sócio: ');
@@ -40,6 +44,10 @@ class SocioController {
     print("CNPJ do Sócio: ");
     int? temp = int.tryParse(stdin.readLineSync()!);
     temp = services.validaInt(temp);
+    while (temp.toString().length != 14) {
+      print('Insira 14 digitos!');
+      temp = int.tryParse(stdin.readLineSync()!);
+    }
     String cnpj = temp.toString();
 
     print('Endereço do Sócio: ');

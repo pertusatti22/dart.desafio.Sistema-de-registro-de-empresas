@@ -21,11 +21,11 @@ class Mock {
   late Juridica juridica1 = Juridica(
       razaoSocial: 'Elisa e Flávia Pães e Doces ME',
       nomeFantasia: 'Pães e Doces',
-      cnpj: '11.941.838/0001-04',
+      cnpj: '11941838000104',
       endereco: endereco1);
   late Fisica fisica1 = Fisica(
       nome: 'Mirella Kamilly Letícia Barbosa',
-      cpf: '763.679.800-08',
+      cpf: '76367980008',
       endereco: endereco2);
   late Empresa empresa1 = Empresa(
       juridica: juridica1, telefone: '(19) 9 8838-0630', socio: fisica1);
@@ -47,12 +47,12 @@ class Mock {
   late Juridica juridica2 = Juridica(
       razaoSocial: 'Arthur e Andreia Telas Ltda',
       nomeFantasia: 'Telas',
-      cnpj: '92.456.516/0001-63',
+      cnpj: '92456516000163',
       endereco: endereco3);
   late Juridica juridica3 = Juridica(
       razaoSocial: 'Lavínia e Tereza Locações de Automóveis Ltda',
       nomeFantasia: 'Loc. Auto',
-      cnpj: '87.009.263/0001-40',
+      cnpj: '87009263000140',
       endereco: endereco4);
   late Empresa empresa2 = Empresa(
       juridica: juridica2, telefone: '(11) 9 9572-6906', socio: juridica3);

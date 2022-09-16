@@ -18,7 +18,7 @@ class Empresa {
   String? apresentar() {
     print(' ');
     return '''ID: $id
-                CNPJ ${juridica.cnpj} Data Cadastro: $createdAt
+                CNPJ ${juridica.formatar()} Data Cadastro: $createdAt
                 Razão Social: ${juridica.razaoSocial}
                 Nome Fantasia: ${juridica.nomeFantasia}
                 Telefone: $telefone
