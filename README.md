@@ -1,10 +1,23 @@
-# Resumo
+# Apresentação
+Todos os desafios propostos foram realizados.
+Mantive o mock para facilitar os testes.
+Por estar trabalhando sozinho mantive apenas a branch master e não tive necessidade de criar novas branchs.
+
+Como possibilidades de melhoria para depois do prazo de entrega
+- [ ] Formatação de CEP e Telefone
+- [ ] Tratamento dos inputs string para evitar problemas como lowcase entre outros
+- [ ] Formatação de campos de nome para capitalizar
+- [ ] Substituir a lista que salva empresas por um arquivo json, transformando em Map e encodando/decodando objetos para simular uma persistência
+- [ ] investigar por que ele não consegue contar o 0 no início do CPF e provavelmente dos demais números, impedindo validação e formatação
+
+
+## Resumo
 Desafio Proposto para o curso de Desenvolvedor mobile da Próz.   
 Instruções em: https://gist.github.com/DeyvidJLira/d429c2f8b7178b48215c86c90d4fb5f5
 
 ## Funcionalidades:
 
-- [x]  Cadastrar uma nova empresa;
+- [x] Cadastrar uma nova empresa;
 - [x] Buscar Empresa cadastrada por CNPJ;
 - [x] Buscar Empresa por CPF/CNPJ do Sócio;
 - [x] Listar Empresas cadastradas em ordem alfabética (baseado na Razão Social);
