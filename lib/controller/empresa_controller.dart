@@ -21,14 +21,14 @@ class EmpresaController {
 
     print('Telefone: ');
     input = stdin.readLineSync();
-    String? telefone = services.validaEscolha(input);
+    String telefone = services.validaEscolha(input)!;
 
     print('Cadastrar Sócio');
     print(
         'Digite 1 para sócio pessoa física ou 2 para sócio pessoa jurídica: ');
     input = stdin.readLineSync();
     String? opcao = services.validaEscolha(input);
-    Pessoa? socio;
+    late Pessoa socio;
     if (opcao == '1') {
       Fisica temp = socioController.cadastrarSocioPessoaFisica();
       socio = temp;

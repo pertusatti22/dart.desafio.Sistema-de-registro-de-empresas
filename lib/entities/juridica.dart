@@ -23,4 +23,9 @@ class Juridica extends Pessoa {
         ${super.apresentar()}
         ''';
   }
+
+  @override
+  String? identificacao() {
+    return '$cnpj';
+  }
 }

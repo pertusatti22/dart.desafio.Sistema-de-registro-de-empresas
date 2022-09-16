@@ -11,15 +11,30 @@ class Database {
   void addEmpresa() {
     var temp = empresaController.cadastrarEmpresa();
     database.add(temp);
+    print(database[0]);
   }
 
   void showEmpresaCnpj(String cnpj) {
     for (var empresa in database) {
-      if (empresa.juridica?.cnpj == cnpj) {
+      if (empresa.juridica.cnpj == cnpj) {
         print('''
                 ${empresa.apresentar()}
                 Sócio:
-                ${empresa.socio?.apresentar()}
+                ${empresa.socio.apresentar()}
+              ''');
+      } else {
+        services.escolhaInvalida();
+      }
+    }
+  }
+
+  void showEmpresaSocio(String socio) {
+    for (var empresa in database) {
+      if (empresa.socio.identificacao() == socio) {
+        print('''
+                ${empresa.apresentar()}
+                Sócio:
+                ${empresa.socio.apresentar()}
               ''');
       } else {
         services.escolhaInvalida();

@@ -8,9 +8,9 @@ class Empresa {
 
   var id = Uuid().v4();
   final createdAt = DateTime.now();
-  Juridica? juridica;
-  String? telefone;
-  Pessoa? socio;
+  late Juridica juridica;
+  late String telefone;
+  late Pessoa socio;
 
   Empresa(
       {required this.juridica, required this.telefone, required this.socio});
@@ -19,11 +19,11 @@ class Empresa {
     print(' ');
     return '''
 ID: $id
-CNPJ ${juridica?.cnpj} Data Cadastro: $createdAt
-Razão Social: ${juridica?.razaoSocial}
-Nome Fantasia: ${juridica?.nomeFantasia}
+CNPJ ${juridica.cnpj} Data Cadastro: $createdAt
+Razão Social: ${juridica.razaoSocial}
+Nome Fantasia: ${juridica.nomeFantasia}
 Telefone: $telefone
-Endereço: ${juridica?.endereco?.showEndereco()}
+Endereço: ${juridica.endereco.showEndereco()}
 ''';
   }
 }

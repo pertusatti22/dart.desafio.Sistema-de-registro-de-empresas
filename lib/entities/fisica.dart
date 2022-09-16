@@ -20,4 +20,9 @@ class Fisica extends Pessoa {
         ${super.apresentar()}
         ''';
   }
+
+  @override
+  String? identificacao() {
+    return '$cpf';
+  }
 }
