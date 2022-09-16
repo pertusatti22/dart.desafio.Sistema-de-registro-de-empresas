@@ -1,0 +1,31 @@
+{
+  "id": "fb7afcf0-2669-4e2b-8bd7-72d7456762b0",
+  "juridica": {
+    "razao-social": "Arthur e Andreia Telas Ltda",
+    "nome-fantasia": "Telas",
+    "cnpj": "92.456.516/0001-63",
+    "endereco": {
+      "logradouro": "Rua Domingos Vendemiati",
+      "numero": "154",
+      "complemento": "Parque Recanto do Parrilho",
+      "bairro": "Jundiaí",
+      "estado": "SP",
+      "cep": "13.219-051"
+    }
+  },
+  "telefone": "(11) 9 9572-6906",
+  "data-cadastro": "2022-08-31 22:37:17.921952",
+  "socio": {
+    "cnpj": "87.009.263/0001-40",
+    "razao-social": "Lavínia e Tereza Locações de Automóveis Ltda",
+    "nome-fantasia": "Loc. Auto",
+    "endereco": {
+      "logradouro": "Rua Ângelo Alberto Nesti",
+      "numero": "639",
+      "complemento": "Bussocaba",
+      "bairro": "Osasco",
+      "estado": "SP",
+      "cep": "06.053-060"
+    }
+  }
+}
