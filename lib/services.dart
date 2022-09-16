@@ -1,11 +1,11 @@
 import 'dart:io';
 
-class Menu {
+class Services {
   //Atributos
   String? escolha;
 
   // Métodos
-  String? mainMenu() {
+  void mainMenu() {
     print('''
       1. Cadastrar uma nova empresa
       2. Buscar Empresa cadastrada por CNPJ
@@ -16,6 +16,17 @@ class Menu {
     ''');
     print('Selecione uma opção:');
     escolha = stdin.readLineSync()!;
+    validaEscolha(escolha);
+  }
+
+  String? validaEscolha(escolha) {
+    while (escolha == '' || escolha == null) {
+      print(escolhaInvalida());
+    }
     return escolha;
+  }
+
+  String escolhaInvalida() {
+    return 'Opção inválida, tente novamente!';
   }
 }

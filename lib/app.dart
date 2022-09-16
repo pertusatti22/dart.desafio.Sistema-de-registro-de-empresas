@@ -1,34 +1,35 @@
-import 'package:dart/menu.dart';
+import 'dart:io';
+
+import 'package:dart/services.dart';
 
 import 'database/database.dart';
 
 class App {
   var database = Database();
-  var menu = Menu();
+  Services services = Services();
 
   void app() {
     while (true) {
       print('Bem-Vindo a nosso Sistema de empresas');
-      menu.mainMenu();
-
-      if (menu.escolha == '6') {
+      services.mainMenu();
+      if (services.escolha == '1') {
+        database.addEmpresa();
+      } else if (services.escolha == '2') {
+        print("Digite o CNPJ: ");
+        var input = stdin.readLineSync();
+        String cnpj = services.validaEscolha(input)!;
+        database.showEmpresaCnpj(cnpj);
+      } else if (services.escolha == '3') {
+        print('3');
+      } else if (services.escolha == '4') {
+        print('4');
+      } else if (services.escolha == '5') {
+        print('5');
+      } else if (services.escolha == '6') {
         print('Sair');
         break;
       } else {
-        if (menu.escolha == '1') {
-          print('Cadastrar nova empresa');
-        } else if (menu.escolha == '2') {
-          print('Buscar Empresa cadastrada por CNPJ');
-        } else if (menu.escolha == '3') {
-          print('Buscar Empresa por CPF/CNPJ do Sócio');
-        } else if (menu.escolha == '4') {
-          print(
-              'Listar Empresas cadastradas em ordem alfabética (baseado na Razão Social)');
-        } else if (menu.escolha == '5') {
-          print('Excluir uma empresa (por ID)');
-        } else {
-          print('Opção inválida, tente novamente!');
-        }
+        print(services.escolhaInvalida());
       }
     }
   }
