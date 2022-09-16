@@ -7,8 +7,8 @@ Instruções em: https://gist.github.com/DeyvidJLira/d429c2f8b7178b48215c86c90d4
 - [x]  Cadastrar uma nova empresa;
 - [x] Buscar Empresa cadastrada por CNPJ;
 - [x] Buscar Empresa por CPF/CNPJ do Sócio;
-- [ ] Listar Empresas cadastradas em ordem alfabética (baseado na Razão Social);
-- [ ] Excluir uma empresa (por ID);
+- [x] Listar Empresas cadastradas em ordem alfabética (baseado na Razão Social);
+- [x] Excluir uma empresa (por ID);
 - [x] Sair.
 
 ## Requisitos:

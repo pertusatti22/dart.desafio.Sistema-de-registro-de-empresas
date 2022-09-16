@@ -7,7 +7,7 @@ import 'database/mock.dart';
 
 class App {
   var database = Database();
-  var temp;
+  String? temp;
   Services services = Services();
   Mock mock = Mock();
 
@@ -31,9 +31,12 @@ class App {
         String socio = services.validaEscolha(temp)!;
         database.showEmpresaSocio(socio);
       } else if (services.escolha == '4') {
-        print('4');
+        database.listarEmpresas();
       } else if (services.escolha == '5') {
-        print('5');
+        print("Digite o ID da empresa: ");
+        temp = stdin.readLineSync();
+        String id = services.validaEscolha(temp)!;
+        database.removeEmpresa(id);
       } else if (services.escolha == '6') {
         print('Sair');
         break;
