@@ -18,30 +18,35 @@ class App {
     while (true) {
       print('Bem-Vindo a nosso Sistema de empresas');
       services.mainMenu();
-      if (services.escolha == '1') {
+      if (services.opcao == '1') {
         database.addEmpresa();
-      } else if (services.escolha == '2') {
+        print('Empresa adicionada com Sucesso!');
+      } else if (services.opcao == '2') {
         print("Digite o CNPJ: ");
         temp = stdin.readLineSync();
         String cnpj = services.validaEscolha(temp)!;
         database.showEmpresaCnpj(cnpj);
-      } else if (services.escolha == '3') {
+        print('Empresa encontrada com Sucesso!');
+      } else if (services.opcao == '3') {
         print("Digite o CPF/CNPJ: ");
         temp = stdin.readLineSync();
         String socio = services.validaEscolha(temp)!;
         database.showEmpresaSocio(socio);
-      } else if (services.escolha == '4') {
+        print('Empresa encontrada com Sucesso!');
+      } else if (services.opcao == '4') {
         database.listarEmpresas();
-      } else if (services.escolha == '5') {
+        print('Empresas listadas com Sucesso!');
+      } else if (services.opcao == '5') {
         print("Digite o ID da empresa: ");
         temp = stdin.readLineSync();
         String id = services.validaEscolha(temp)!;
         database.removeEmpresa(id);
-      } else if (services.escolha == '6') {
+        print('Empresa removida com sucesso!');
+      } else if (services.opcao == '6') {
         print('Sair');
         break;
       } else {
-        print(services.escolhaInvalida());
+        print(services.opcaoInvalida());
       }
     }
   }

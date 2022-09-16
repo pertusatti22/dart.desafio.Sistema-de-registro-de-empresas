@@ -16,11 +16,10 @@ class Juridica extends Pessoa {
 
   @override
   String? apresentar() {
-    return '''
-        CNPJ: $cnpj
-        Razão Social: $razaoSocial
-        Nome Fantasia: $nomeFantasia
-        ${super.apresentar()}
+    return '''CNPJ: $cnpj
+                Razão Social: $razaoSocial
+                Nome Fantasia: $nomeFantasia
+                ${super.apresentar()}
         ''';
   }
 

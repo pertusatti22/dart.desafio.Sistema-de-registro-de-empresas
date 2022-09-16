@@ -20,8 +20,9 @@ class EmpresaController {
     var juridica = _cadastrarPessoaJuridica();
 
     print('Telefone: ');
-    input = stdin.readLineSync();
-    String telefone = services.validaEscolha(input)!;
+    int? temp = int.tryParse(stdin.readLineSync()!);
+    temp = services.validaInt(temp);
+    String telefone = temp.toString();
 
     print('Cadastrar Sócio');
     print(
@@ -36,7 +37,7 @@ class EmpresaController {
       Juridica temp = socioController.cadastrarSocioPessoaJuridica();
       socio = temp;
     } else {
-      print(services.escolhaInvalida());
+      print(services.opcaoInvalida());
     }
 
     return Empresa(juridica: juridica, telefone: telefone, socio: socio);
@@ -52,8 +53,9 @@ class EmpresaController {
     String nomeFantasia = services.validaEscolha(input)!;
 
     print("CNPJ: ");
-    input = stdin.readLineSync();
-    String cnpj = services.validaEscolha(input)!;
+    int? temp = int.tryParse(stdin.readLineSync()!);
+    temp = services.validaInt(temp);
+    String cnpj = temp.toString();
 
     print('Endereço da Empresa: ');
     var endereco = enderecoController.cadastrarEndereco();

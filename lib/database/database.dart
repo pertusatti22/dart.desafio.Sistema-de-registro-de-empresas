@@ -19,7 +19,7 @@ class Database {
       if (empresa.juridica.cnpj == cnpj) {
         print('${apresentarDados(empresa)}');
       } else {
-        services.escolhaInvalida();
+        services.opcaoInvalida();
       }
     }
   }
@@ -29,14 +29,13 @@ class Database {
       if (empresa.socio.identificacao() == socio) {
         print('${apresentarDados(empresa)}');
       } else {
-        services.escolhaInvalida();
+        services.opcaoInvalida();
       }
     }
   }
 
   void removeEmpresa(String id) {
     database.removeWhere((empresa) => empresa.id == id);
-    print('Empresa Deletada');
   }
 
   void listarEmpresas() {
@@ -52,10 +51,9 @@ class Database {
   String? apresentarDados(empresa) {
     return '''
                 ${empresa.apresentar()}
-                _______________________
                 Sócio:
                 ${empresa.socio.apresentar()}
-                _______________________
+                ________________________________________________________________
               ''';
   }
 }

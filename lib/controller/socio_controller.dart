@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:dart/entities/fisica.dart';
@@ -17,8 +18,9 @@ class SocioController {
     String nome = services.validaEscolha(input)!;
 
     print("CPF do Sócio: ");
-    input = stdin.readLineSync();
-    String cpf = services.validaEscolha(input)!;
+    int? temp = int.tryParse(stdin.readLineSync()!);
+    temp = services.validaInt(temp);
+    String cpf = temp.toString();
 
     print('Endereço do Sócio: ');
     var endereco = enderecoSocio.cadastrarEndereco();
@@ -28,16 +30,17 @@ class SocioController {
 
   Juridica cadastrarSocioPessoaJuridica() {
     print("Razão Social do Sócio: ");
-    input = stdin.readLineSync();
+    input = stdin.readLineSync(encoding: utf8);
     String razaoSocial = services.validaEscolha(input)!;
 
     print("Nome Fantasia do Sócio: ");
-    input = stdin.readLineSync();
+    input = stdin.readLineSync(encoding: utf8);
     String nomeFantasia = services.validaEscolha(input)!;
 
     print("CNPJ do Sócio: ");
-    input = stdin.readLineSync();
-    String cnpj = services.validaEscolha(input)!;
+    int? temp = int.tryParse(stdin.readLineSync()!);
+    temp = services.validaInt(temp);
+    String cnpj = temp.toString();
 
     print('Endereço do Sócio: ');
     var endereco = enderecoSocio.cadastrarEndereco();

@@ -16,12 +16,12 @@ Instruções em: https://gist.github.com/DeyvidJLira/d429c2f8b7178b48215c86c90d4
 - [ ] Toda pessoa seja física ou jurídica, devem saber validar seu documento (CPF/CNPJ);
 - [x] O programa deve ser criado considerando os recursos disponíveis da Orientação à Objetos e boas práticas;
 - [x] O programa deve ter no mínimo uma herança;
-- [ ] CPF e CNPJ são do tipo String, mas o input do usuário será apenas números;
-- [ ] Telefone é do tipo String, mas o input do usuário será apenas números, ex.: 81987654321;
-- [ ] CEP é do tipo String, mas o input do usuário será apenas números;
+- [x] CPF e CNPJ são do tipo String, mas o input do usuário será apenas números;
+- [x] Telefone é do tipo String, mas o input do usuário será apenas números, ex.: 81987654321;
+- [x] CEP é do tipo String, mas o input do usuário será apenas números;
 - [x] O ID deve ser único, para cada Empresa cadastrada;
 - [x] O horário de cadastro deve ser obtido automaticamente pelo sistema;
-- [ ] A impressão do conteúdo de uma empresa deve atender no mínimo a seguinte formatação:
+- [x] A impressão do conteúdo de uma empresa deve atender no mínimo a seguinte formatação:
 
 ## Formatação Esperada
 

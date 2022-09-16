@@ -30,8 +30,9 @@ class EnderecoController {
     String estado = services.validaEscolha(input)!;
 
     print("CEP: ");
-    input = stdin.readLineSync();
-    String cep = services.validaEscolha(input)!;
+    int? temp = int.tryParse(stdin.readLineSync()!);
+    temp = services.validaInt(temp);
+    String cep = temp.toString();
 
     return Endereco(
         logradouro: logradouro,

@@ -2,7 +2,8 @@ import 'dart:io';
 
 class Services {
   //Atributos
-  String? escolha;
+  String? opcao;
+  late int temp;
 
   // Métodos
   void mainMenu() {
@@ -15,18 +16,28 @@ class Services {
       6. Sair
     ''');
     print('Selecione uma opção:');
-    escolha = stdin.readLineSync()!;
-    validaEscolha(escolha);
+    opcao = stdin.readLineSync()!;
+    validaEscolha(opcao);
   }
 
-  String? validaEscolha(escolha) {
-    while (escolha == '' || escolha == null) {
-      print(escolhaInvalida());
+  String? validaEscolha(opcao) {
+    while (opcao == '' || opcao == null) {
+      print(opcaoInvalida());
+      opcao = stdin.readLineSync();
     }
-    return escolha;
+    return opcao;
   }
 
-  String escolhaInvalida() {
+  int validaInt(numOpcao) {
+    while (numOpcao == null) {
+      opcaoInvalida();
+      print('Insira Somente Números: ');
+      numOpcao = int.tryParse(stdin.readLineSync()!);
+    }
+    return numOpcao;
+  }
+
+  String opcaoInvalida() {
     return 'Opção inválida, tente novamente!';
   }
 }

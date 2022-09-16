@@ -14,10 +14,9 @@ class Fisica extends Pessoa {
 
   @override
   String? apresentar() {
-    return '''
-        CPF: $cpf
-        Nome Completo: $nome
-        ${super.apresentar()}
+    return '''CPF: $cpf
+                Nome Completo: $nome
+                ${super.apresentar()}
         ''';
   }
 

@@ -17,13 +17,11 @@ class Empresa {
 
   String? apresentar() {
     print(' ');
-    return '''
-ID: $id
-CNPJ ${juridica.cnpj} Data Cadastro: $createdAt
-Razão Social: ${juridica.razaoSocial}
-Nome Fantasia: ${juridica.nomeFantasia}
-Telefone: $telefone
-Endereço: ${juridica.endereco.showEndereco()}
-''';
+    return '''ID: $id
+                CNPJ ${juridica.cnpj} Data Cadastro: $createdAt
+                Razão Social: ${juridica.razaoSocial}
+                Nome Fantasia: ${juridica.nomeFantasia}
+                Telefone: $telefone
+                Endereço: ${juridica.endereco.showEndereco()}''';
   }
 }
